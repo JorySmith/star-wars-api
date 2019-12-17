@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+  <link rel="stylesheet" href="style.css">
+  <title>Star Wars API Integration</title>
+</head>
+<body>
+  <div class="page-wrapper">
+    <header class="star-wars">
+      <h1>Star Wars</h1>
+      <h2>The galactic dataset</h2>
+      <hr>
+    </header>
+    <section class="main-content">
+      
+      <div class="pick-radio">
+        <p>Pick:</p>
+        <!-- people/1/ or planets/3/ etc -->
+        <input type="radio" name="choice" value="People">Person
+        <input type="radio" name="choice" value="Vehicles">Vehicle
+        <input type="radio" name="choice" value="Planets">Planet
+        <input type="radio" name="choice" value="Starships">Starship
+      </div>
+      <div class="pick-number">
+        <p>Pick a number:</p>
+        <input type="text" id="" size="5" placeholder="####"> 
+        
+      </div>
+      
+      <hr>    
+      <div class="result">
+        <textarea rows="4" cols="50" placeholder="result"></textarea>
+      </div>
+    </section>
+
+  </div>
+
+  <script src="script.js" type="text/javascript"></script>
+</body>
+</html>
