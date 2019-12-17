@@ -5,6 +5,7 @@ https://swapi.co/
 
 try 
 people/1/ or 
+vehicles/2/ or
 planets/3/ or 
 starships/9/
 
