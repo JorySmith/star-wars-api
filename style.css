@@ -14,8 +14,7 @@ body {
   text-shadow: 2px 2px 4px #0003cf;  
   text-align: center;  
   font-size: 28px;
-  width: 100%;
-  height: 100%;
+  width: 100%;  
   background: url('./nasa-unsplash.jpg') no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -25,64 +24,100 @@ body {
 }
 
 header {
-  display: block;
+  display: flex;
+  flex-direction: column;
   font-family: 'Star Jedi Outline Regular';  
   text-shadow: 4px 4px 4px #0003cf; 
+  margin: 0;
+  padding: 0;
   
 }
 
-header h1 {
+.star-wars {
   font-size: 4rem;
   font-weight: 100;
   padding: 0px;
   margin: 40px 0 0 0;
 
 }
-hr {
-  width: 800px;
-}
 
-header p {
+.dataset {
   font-size: 3rem;
   padding: 0px;
   margin: 0;
 }
 
-@media only screen and (max-width: 650px){
-  header h1 {
-    font-size: 3rem;    
-  }
-  
-  header p {
-    font-size: 1.5rem;
-  }
-
-  hr {
-    width: 300px;
-  }
+hr {
+  width: 60vw;
 }
 
-.picks {
-  background-color: #000000;
-
-  
+.main-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  width: 50vw;
+  margin-left: 25%;
 }
 
-.picks p {
-  margin: 0;
-  color: #ffffff;
-  font-size: 1.5em; 
-  
+.pick-one, .pick-number {
+  margin: 10px 0;
+  font-size: 1.4em;
 }
 
-.pick-radio {
-  padding-bottom: 20px;
+.radio-picks {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: center;
+  margin: 0 0 20px 0;
+  color: #ffffff;   
 }
 
-.pick-number {
-  padding-bottom: 10px;
+input[type=radio] {
+  width: 25px;
+  height: 25px;  
 }
+
+label {
+  padding: 0 20px 0 0;
+}
+
 
 .number {
   font-size: .7em;
+}
+
+@media only screen and (max-width: 650px){
+  .star-wars {
+    font-size: 3rem;    
+    
+  }  
+  .dataset {
+    font-size: 1.3rem;
+  }
+
+  .main-content {
+    width: 100vw;
+    margin-left: 0;
+  }
+
+
+  .pick-one, .pick-number {
+    font-size: 1.2em;
+  }
+
+  .radio-picks {
+    display: inline-grid;
+    grid-auto-flow: dense;
+    justify-content: center;
+    font-size: 1em;    
+  }
+  .radio-picks label {
+    grid-column: 2;
+    margin-left: 10px;
+    
+  }   
+  
+     
 }

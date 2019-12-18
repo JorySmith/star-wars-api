@@ -9,31 +9,39 @@
 <body>
 
   <header>
-    <h1>Star Wars</h1>
-    <p>The galactic dataset</p>
+    <div>
+      <h1 class="star-wars">Star Wars</h1>
+    </div>
+    <div>
+      <p class="dataset">The galactic dataset</p class="dataset">
+    </div>
     <hr>
   </header>
 
   <section class="main-content">  
-    <div class="picks">
-      <div class="pick-radio">
-        <p>Pick One:</p>      
-        <input id="people" type="radio" name="choices" value="people">Person
-        <input id="vehicles" type="radio" name="choices" value="vehicles">Vehicle
-        <input id="planets" type="radio" name="choices" value="planets">Planet
-        <input id="starships" type="radio" name="choices" value="starships">Starship
-      </div>
+    <div>
+      <p class="pick-one">Pick One:</p>  
+    </div>
+    <div class="radio-picks">
+        <input id="people" type="radio" name="choices" value="people"><label for="people">Person</label>
+        <input id="vehicles" type="radio" name="choices" value="vehicles"><label for="vehicles">Vehicle</label>
+        <input id="planets" type="radio" name="choices" value="planets"><label for="planets">Planet</label>
+        <input id="starships" type="radio" name="choices" value="starships"><label for="starships">Starship</label>        
+    </div>
 
-      <div class="pick-number">
-        <p>Pick a number:</p>
-        <input class="number" type="text" id="myNumber" size="5" placeholder="####"><br>
-        <button id="submit">Submit</button>    
-      </div>
+    <div>
+      <p class="pick-number">Pick a Number:</p>
+    </div>
+    <div>
+      <input class="number" type="text" id="myNumber" size="5" placeholder="####"><br>
+      <button id="submit">Submit</button> 
     </div>
     <hr>  
+    </div>
+    
 
     <div class="result">
-      <textarea rows="4" cols="50" placeholder="result"></textarea>
+      <textarea rows="4" cols="10" placeholder="result"></textarea>
     </div>
 
   </section>
