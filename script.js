@@ -1,5 +1,4 @@
-// take radio input value 
-// take number input value 
+
 
 // people/1/ or 
 // vehicles/2/ or
@@ -19,26 +18,48 @@
 // .then(data => console.log(data))
 // .catch(() => console.log('error'))
 
+// cache variables
 // const choice = document.getElementsByName('choices');
 const num = document.getElementById('myNumber');
 const button = document.getElementById('submit');
+const result = document.getElementsByClassName('result-name');
 
+// add button listener for click to initiate grab radio and number values
+// get radio input value 
+// get number input value 
+// put both values into the fetch URL: `http swapi.co/api/${radio}/${number}/`
 
-function radioValue() { 
-  var ele = document.getElementsByName('choices');     
-  for(i = 0; i < ele.length; i++) { 
-    if(ele[i].checked) {
+radio = function radioValue() { 
+  let ele = document.getElementsByName('choices');     
+  for (i = 0; i < ele.length; i++) { 
+    if (ele[i].checked) {
       return ele[i].value; 
     }      
   } 
 }   
 
-function returnPicks() {
-  radioSelection = radioValue()
-  numSelection = num.value;
-  return [radioSelection, numSelection];  
-  
+number = function numberValue() {
+  return num.value;
 }
+
+async function returnPicks() {
+  c = [];
+  a = radio();
+  b = number();
+  c.push(a, b);  
+  
+  var response = await fetch(`https://swapi.co/api/${c[0]}/${c[1]}/`)
+  var data = await response.json();
+  console.log(data);
+
+  // grab result div, input results from fetch
+  result.innerHTML = data[name];
+
+
+
+}
+
+
 
 
 

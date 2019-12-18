@@ -47,7 +47,7 @@ header {
   margin: 0;
 }
 
-hr {
+header hr {
   width: 60vw;
 }
 
@@ -88,7 +88,11 @@ label {
   font-size: .7em;
 }
 
-@media only screen and (max-width: 650px){
+.main-content hr {
+  width: 100%;
+}
+
+@media only screen and (max-width: 770px){
   .star-wars {
     font-size: 3rem;    
     
@@ -117,7 +121,13 @@ label {
     grid-column: 2;
     margin-left: 10px;
     
-  }   
-  
+  }    
      
+}
+
+@media only screen and (max-width: 1150px) {
+  .main-content {
+    width: 75vw;
+    margin-left: 10%;
+  }
 }
